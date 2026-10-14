@@ -1,0 +1,6 @@
+{
+  "name": "Nashik Simhastha Kumbh Mela 2027",
+  "description": "Plan your Nashik Simhastha Kumbh Mela 2027 pilgrimage with travel guides, accommodation options, tour packages, and taxi services for Nashik and Trimbakeshwar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

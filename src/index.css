@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-devanagari: "Noto Sans Devanagari", sans-serif;
+
+  --color-saffron: #FF6B00;
+  --color-saffron-light: #FF8A34;
+  --color-saffron-dark: #D84D00;
+  
+  --color-gold: #F59E0B;
+  --color-gold-light: #FBBF24;
+  --color-gold-dark: #D97706;
+
+  --color-maroon: #800000;
+  --color-maroon-dark: #580E0E;
+  --color-crimson: #991B1B;
+
+  --color-ivory: #FFFDF9;
+  --color-ivory-dark: #FBF6EE;
+  
+  --color-temple-dark: #160F0A;
+  --color-temple-card: #201610;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF5EE;
+  color: #1F1914;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  letter-spacing: -0.015em;
+}
+
+.font-devanagari {
+  font-family: var(--font-devanagari);
+}
+
+/* Reference Template (Dharma) Temple Styling & Gradients */
+.gradient-saffron-gold {
+  background: linear-gradient(135deg, #FF6B00 0%, #F59E0B 100%);
+}
+
+.gradient-maroon {
+  background: linear-gradient(135deg, #800000 0%, #991B1B 50%, #B91C1C 100%);
+}
+
+.gradient-dark-temple {
+  background: linear-gradient(180deg, #1C120B 0%, #120C07 100%);
+}
+
+.gradient-gold-text {
+  background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-saffron-text {
+  background: linear-gradient(135deg, #FF6B00 0%, #EA580C 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle devotional mandala/rangoli backdrop */
+.pattern-temple {
+  background-color: #FAF5EE;
+  background-image: radial-gradient(#E8D8C3 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle devotional sacred jaali / geometry pattern */
+.pattern-devotional-light {
+  background-color: #FAF5EE;
+  background-image: radial-gradient(#DECCA6 1.2px, transparent 1.2px), radial-gradient(#EADBC8 1.2px, #FAF5EE 1.2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+}
+
+/* Subtle devotional pattern for dark temple sections */
+.pattern-devotional-dark {
+  background-color: #140E0A;
+  background-image: radial-gradient(#F59E0B 0.8px, transparent 0.8px);
+  background-size: 28px 28px;
+}
+
+/* Ornate decorative divider */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, #F59E0B);
+}
+.ornament-divider::after {
+  background: linear-gradient(90deg, #F59E0B, transparent);
+}
+
+/* Creative Slider & Devotional Animations */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.0) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, -1%);
+  }
+  100% {
+    transform: scale(1.0) translate(0, 0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.45);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 14s ease-in-out infinite alternate;
+}
+
+.animate-slide-up {
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.glow-temple {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #E0CEB5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4BD9E;
+}
