@@ -743,9 +743,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
           {/* CLEAN EDITORIAL GRID OF CARDS: Strictly DATE and EVENT TITLE ONLY */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-6">
-            {importantShahiSnans.map((snan) => (
+            {importantShahiSnans.map((snan,i) => (
               <div
-                key={snan.id}
+                key={i}
                 onClick={() => onNavigate("/shahi-snan-dates")}
                 className={`group relative rounded-2xl p-7 border transition-all duration-300 flex flex-col justify-between hover:-translate-y-2 cursor-pointer overflow-hidden ${
                   snan.isMajor
